@@ -1,2 +1,2 @@
 #!/bin/bash
-rclone sync /data onedrive:/backup
+rclone sync /data onedrive:/rclone-backup
