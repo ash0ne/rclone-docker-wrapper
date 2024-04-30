@@ -1,6 +1,6 @@
 # Rclone OneDrive Docker Wrapper
 
-A docker wrapper around rclone that syncs to OneDrive from Docker/unRAID every day
+A docker wrapper around rclone that syncs to OneDrive from Docker/unRAID everyday.
 
 The only thing that this docker container does is sync/backup whatever you mount at `/data` to a directory named `/rclone-backup` in your OneDrive.
 I might considere adding other remote sources later.
