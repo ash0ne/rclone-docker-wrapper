@@ -1,0 +1,2 @@
+# Run the backup.sh script every hour
+0 0 * * * root /usr/local/bin/backup.sh
