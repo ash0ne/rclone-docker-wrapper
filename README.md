@@ -1,4 +1,4 @@
-# Rclone OneDrive Docker Wrapper
+# Rclone Docker Wrapper
 
 A docker wrapper for rclone that syncs to any remote from Docker/unRAID.
 
