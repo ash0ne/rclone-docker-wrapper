@@ -1,38 +1,38 @@
 {
     "release": {
-      "branches": [
-        "main"
-      ],
-      "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/npm",
-        "@semantic-release/github",
-        [
-          "@semantic-release/changelog",
-          {
-            "changelogFile": "./CHANGELOG.md"
-          }
+        "branches": [
+            "main"
         ],
-        [
-          "@semantic-release/git",
-          {
-            "assets": [
-              "./CHANGELOG.md",
-              "./package.json"
-            ]
-          }
-        ],
-        "@semantic-release/release-notes-generator"
-      ]
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/npm",
+            "@semantic-release/github",
+            [
+                "@semantic-release/changelog",
+                {
+                    "changelogFile": "./CHANGELOG.md"
+                }
+            ],
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "./CHANGELOG.md",
+                        "./package.json"
+                    ]
+                }
+            ],
+            "@semantic-release/release-notes-generator"
+        ]
     },
     "name": "rclone-docker-wrapper",
     "private": true,
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "A docker wrapper for rclone that syncs to OneDrive from unRAID every day.",
     "author": "ash0ne",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/ash0ne/rclone-onedrive-docker-wrapper.git"
+        "type": "git",
+        "url": "https://github.com/ash0ne/rclone-onedrive-docker-wrapper.git"
     }
-  }
+}
