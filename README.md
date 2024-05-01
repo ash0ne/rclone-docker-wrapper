@@ -1,5 +1,10 @@
 # Rclone Docker Wrapper
 
+![CI Status Badge](https://github.com/ash0ne/rclone-docker-wrapper/actions/workflows/ci.yml/badge.svg)
+![GitHub License](https://img.shields.io/github/license/ash0ne/rclone-docker-wrapper)
+[![Docker Image Version](https://img.shields.io/docker/v/a0ne/rclone-docker-wrapper)](https://hub.docker.com/r/a0ne/rclone-docker-wrapper)
+![Docker Pulls](https://img.shields.io/docker/pulls/a0ne/rclone-docker-wrapper)
+
 A docker wrapper for rclone that syncs to any remote from Docker/unRAID.
 
 The only thing that this docker container does is sync(backup) whatever you mount at `/data` to a directory named `/rclone-backup` in your remote. I might see if it is worth adding support for more than one source and remote but for now, it'll be a single source to a single remote.
