@@ -1,11 +1,18 @@
-FROM rclone/rclone:latest
+# Use Ubuntu as base image
+FROM ubuntu
 
-COPY backup.sh /usr/local/bin/backup.sh
-RUN chmod +x /usr/local/bin/backup.sh
+RUN apt-get update && \
+    apt-get install -y rclone curl
 
-COPY cronjob /etc/cron.d/backup-cron
-RUN chmod 0644 /etc/cron.d/backup-cron
+RUN mkdir -p /data
 
-RUN crontab /etc/cron.d/backup-cron
+ENV RCLONE_CONFIG /rclone/config/rclone.conf
 
-CMD ["cron", "-f"]
+COPY sync.sh /sync.sh
+RUN chmod +x /sync.sh
+
+ENV INTERVAL 3600
+ENV DRY_RUN false
+ENV REMOTE remote
+
+CMD ["/sync.sh"]
