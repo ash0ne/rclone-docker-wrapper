@@ -5,9 +5,9 @@ sync_data() {
     if [ "$DRY_RUN" = "true" ]; then
         echo "Performing a dry run..."
         echo "-----------------------"
-        rclone sync /data "$REMOTE":/rclone-backup-test --dry-run
+        rclone sync /data "$REMOTE":/rclone-backup --dry-run
     else
-        rclone sync /data "$REMOTE":/rclone-backup-test --verbose
+        rclone sync /data "$REMOTE":/rclone-backup --verbose
     fi
 }
 
