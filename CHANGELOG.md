@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ash0ne/rclone-docker-wrapper/compare/v1.0.1...v1.1.0) (2024-09-09)
+
+
+### Features
+
+* rclone version update ([46ae462](https://github.com/ash0ne/rclone-docker-wrapper/commit/46ae46225a42f8ce3ba77922121659958a2eed03))
+
 ## [1.0.1](https://github.com/ash0ne/rclone-onedrive-docker-wrapper/compare/v1.0.0...v1.0.1) (2024-05-02)
 
 
