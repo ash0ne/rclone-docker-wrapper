@@ -5,13 +5,14 @@ RUN apt-get update && \
     apt-get install -y curl unzip && \
     rm -rf /var/lib/apt/lists/*
 
-RUN ARCH=$(uname -m) && \
-    if [ "$ARCH" = "x86_64" ]; then \
+ARG TARGETARCH
+
+RUN if [ "$TARGETARCH" = "amd64" ]; then \
         curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip; \
-    elif [ "$ARCH" = "aarch64" ]; then \
+    elif [ "$TARGETARCH" = "arm64" ]; then \
         curl -O https://downloads.rclone.org/rclone-current-linux-arm64.zip; \
     else \
-        echo "Unsupported architecture"; exit 1; \
+        echo "Unsupported architecture: $TARGETARCH"; exit 1; \
     fi && \
     unzip rclone-current-linux-*.zip && \
     cd rclone-*-linux-* && \
