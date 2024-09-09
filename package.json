@@ -27,7 +27,7 @@
     },
     "name": "rclone-docker-wrapper",
     "private": true,
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "A docker wrapper for rclone that syncs to OneDrive from unRAID every day.",
     "author": "ash0ne",
     "license": "MIT",

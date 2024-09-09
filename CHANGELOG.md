@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ash0ne/rclone-docker-wrapper/compare/v1.1.0...v1.2.0) (2024-09-09)
+
+
+### Features
+
+* rclone 1.67 update ([6157c0f](https://github.com/ash0ne/rclone-docker-wrapper/commit/6157c0ff4b72322e1b8dcd7ddd42a082e67f0c3f))
+
 # [1.1.0](https://github.com/ash0ne/rclone-docker-wrapper/compare/v1.0.1...v1.1.0) (2024-09-09)
 
 
