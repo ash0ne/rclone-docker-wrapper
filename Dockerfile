@@ -26,7 +26,7 @@ RUN if [ "$TARGETARCH" = "amd64" ]; then \
     cp rclone /usr/bin/ && \
     chown root:root /usr/bin/rclone && \
     chmod 755 /usr/bin/rclone && \
-    rm -rf rclone-current-linux-*.zip rclone-*-linux-*
+    rm -rf /rclone-*-linux-*
 
 # Create a directory for data
 RUN mkdir -p /data
