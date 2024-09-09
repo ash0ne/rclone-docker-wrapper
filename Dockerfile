@@ -2,7 +2,23 @@
 FROM ubuntu
 
 RUN apt-get update && \
-    apt-get install -y rclone curl
+    apt-get install -y curl unzip && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "x86_64" ]; then \
+        curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip; \
+    elif [ "$ARCH" = "aarch64" ]; then \
+        curl -O https://downloads.rclone.org/rclone-current-linux-arm64.zip; \
+    else \
+        echo "Unsupported architecture"; exit 1; \
+    fi && \
+    unzip rclone-current-linux-*.zip && \
+    cd rclone-*-linux-* && \
+    cp rclone /usr/bin/ && \
+    chown root:root /usr/bin/rclone && \
+    chmod 755 /usr/bin/rclone && \
+    rm -rf rclone-current-linux-*.zip rclone-*-linux-*
 
 RUN mkdir -p /data
 
