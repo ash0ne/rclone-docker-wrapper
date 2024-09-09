@@ -6,8 +6,6 @@ RUN apt-get update && \
 
 ARG TARGETARCH
 
-RUN echo "Building for architecture: $TARGETARCH"
-
 RUN if [ "$TARGETARCH" = "amd64" ]; then \
         curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip; \
     elif [ "$TARGETARCH" = "arm64" ]; then \
